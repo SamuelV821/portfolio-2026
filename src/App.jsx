@@ -54,8 +54,7 @@ function App() {
         <p className="text-white font-bold">© 2026 Samuel Vega</p>
         </div>
 
-        <div className="flex gap-8">
-        {/* Reemplazá con tus links reales */}
+        <div className="flex flex-col md:flex-row gap-8">
         <a 
         href="https://github.com/Incahuasi123" 
         target="_blank" 
