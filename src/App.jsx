@@ -15,7 +15,7 @@ function Tecnologias(){
   ]
 
   return (
-    <div className="bg-slate-300/2 p-8 gap-6 grid grid-cols-2 md:grid-cols-3">
+    <div className="bg-slate-300/2 p-8 gap-6 grid grid-cols-2 md:grid-cols-3 rounded-2xl">
       <h1 className="col-span-2 md:col-span-3 text-center text-3xl font-bold mb-10">Tecnologias</h1>
       {stack.map((tech,index)=>(
         <span key={index} className="flex flex-col items-center p-3 gap-2 bg-slate-600 rounded-xl transition-all duration:300 hover:bg-slate-400 hover:scale-105">
@@ -39,7 +39,7 @@ function App() {
           <h2 className="text-1xl md:text-3xl ">Full-Stack Software Engineer</h2>
         </div>
 
-        <div className="bg-slate-300/2 p-8">
+        <div className="bg-slate-300/2 p-8 rounded-2xl">
           <h1>Sobre mi:</h1>
           <p className="">
             "Ingeniero de Software con un enfoque pragmático en la resolución de problemas. Mi experiencia se centra en la creación de interfaces de usuario dinámicas y sistemas robustos en el lado del servidor. Me apasiona optimizar el rendimiento, escribir código limpio y mantenible, y transformar requerimientos complejos en soluciones tecnológicas eficientes."
