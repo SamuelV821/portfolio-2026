@@ -56,7 +56,7 @@ function App() {
 
         <div className="flex flex-col md:flex-row gap-8">
         <a 
-        href="https://github.com/Incahuasi123" 
+        href="https://github.com/SamuelV821" 
         target="_blank" 
         rel="noopener noreferrer"
         className="text-slate-400 hover:text-amber-400 transition-colors duration-300 font-medium"
