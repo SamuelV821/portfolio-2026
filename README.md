@@ -1,16 +1,40 @@
-# React + Vite
+Un sistema de gestión comercial robusto desarrollado como un reto personal de 96 horas, enfocado en la integridad de datos, seguridad por capas y actualización en tiempo real.
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Stack Tecnológico:
+Frontend: React.js + Tailwind CSS (Diseño responsive y modular).
 
-Currently, two official plugins are available:
+Backend/Database: Supabase (PostgreSQL).
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Real-time: WebSockets para sincronización de inventario instantánea.
 
-## React Compiler
+Seguridad: Row Level Security (RLS) para aislamiento de datos multi-tenant.
 
-The React Compiler is currently not compatible with SWC. See [this issue](https://github.com/vitejs/vite-plugin-react/issues/428) for tracking the progress.
+Arquitectura y Desafíos Técnicos
+Este proyecto no es solo una interfaz; se enfoca en resolver problemas críticos de backend:
 
-## Expanding the ESLint configuration
+Transacciones Atómicas (RPC/SQL): Implementación de funciones en el servidor para asegurar que el descuento de stock y la creación de la boleta de venta ocurran como una única operación. Esto garantiza que nunca haya inconsistencias de inventario.
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+Seguridad Robusta (RLS): Configuración de políticas de seguridad a nivel de base de datos para asegurar que cada negocio solo pueda visualizar y manipular sus propios datos.
+
+Sincronización en Tiempo Real: Uso de canales de Supabase para que cualquier cambio en el stock se refleje automáticamente en todos los dispositivos conectados sin necesidad de recargar la página.
+
+Funcionalidades Implementadas:
+- Autenticación: Sistema de usuarios y perfiles de negocio.
+
+- Gestión de Inventario: CRUD completo de productos con control de existencias.
+
+- Módulo de Ventas: Generación de boletas digitales con vinculación cabecera-detalle.
+
+- Despliegue Profesional: Configuración de variables de entorno y optimización de build.
+
+Instalación y Uso:
+
+.Clona el repositorio.
+
+.Instala las dependencias: npm install.
+
+.Configura tus variables de entorno en un archivo .env (ver .env.example).
+
+.Inicia el servidor de desarrollo: npm run dev.
+
+ "Desarrollado por Pablo Samuel Vega - samuel-v.dev".
