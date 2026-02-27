@@ -1,5 +1,6 @@
 import { FaReact, FaHtml5, FaCss3, FaNodeJs } from "react-icons/fa"
 import { SiTailwindcss, SiJavascript, SiExpress, SiPostgresql, SiReact } from "react-icons/si"
+import { Proyectos } from "./pages/proyectos"
 
 function Tecnologias(){
   const stack = [
@@ -46,6 +47,7 @@ function App() {
           </p>
         </div>
 
+        <Proyectos/>
         <Tecnologias/>
 
         <footer className="mt-12 p-8 bg-slate-300/2 rounded-2xl border border-white/5 flex flex-col md:flex-row justify-between items-center gap-6">
