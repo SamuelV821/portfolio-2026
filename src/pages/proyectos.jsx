@@ -16,7 +16,7 @@ export function Proyectos() {
       {proyectos.map((p, i) => (
         <div key={i} className="bg-slate-300/2 border border-white/5 p-8 rounded-3xl flex flex-col md:flex-row gap-8 hover:border-amber-400/30 transition-all duration-500">
           <div className="flex-1">
-            <div className="flex items-center gap-3 mb-2">
+            <div className="flex flex-col md:flex-row items-center gap-3 mb-2">
                <span className="bg-emerald-500 text-slate-900 text-xs font-black px-2 py-1 rounded-md uppercase tracking-tighter">
                 {p.status}
               </span>
