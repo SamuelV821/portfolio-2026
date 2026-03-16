@@ -21,7 +21,7 @@ function App() {
           <BackGround/>
           <div className="flex justify-center items-center h-screen w-full">
             
-            <div className="transform-gpu backdrop-blur-xs select-none flex flex-col justify-center items-center gap-10 p-10 rounded-full">
+            <div className="transform-gpu bg-black/70 md:backdrop-blur-xs select-none flex flex-col justify-center items-center gap-10 p-10 rounded-full">
               <motion.h1 
               initial={{ opacity: 0, y: -20 }}
               animate={{ opacity: 1, y: 0 }}

@@ -1,70 +1,80 @@
-import { motion } from "motion/react";
-import { useState, useEffect } from "react";
+import { motion } from "framer-motion";
+import { useState, useEffect, useMemo } from "react";
 
-const BinaryColumn = ({ xOffset }) => {
+const BinaryColumn = ({ xOffset, delay, tick }) => {
+    // Generamos la cadena inicial
     const [binaryStr, setBinaryStr] = useState("");
-    const columnLength = 18; // Un poco más largas para que llenen más
+    const length = 18;
 
+    // Solo actualizamos los números cuando el "tick" global cambia
+    // Esto reduce los cálculos un 90%
     useEffect(() => {
-        const interval = setInterval(() => {
-            let str = "";
-            for (let i = 0; i < columnLength; i++) {
-                str += Math.random() > 0.5 ? "1" : "0";
-            }
-            setBinaryStr(str);
-        }, 120); // Un poco más rápido el cambio
-        return () => clearInterval(interval);
-    }, []);
+        let str = "";
+        for (let i = 0; i < length; i++) {
+            str += Math.random() > 0.5 ? "1" : "0";
+        }
+        setBinaryStr(str);
+    }, [tick]); // Solo cambia cuando el padre da la señal
 
     return (
         <motion.div
             initial={{ y: "-100%", opacity: 0 }}
             animate={{ 
-                y: ["0vh", "120vh"], 
+                y: ["0%", "150%"], 
                 opacity: [0, 1, 1, 0] 
             }}
             transition={{
-                duration: Math.random() * 4 + 4, // Lluvia un poco más veloz
+                duration: Math.random() * 5 + 5,
                 repeat: Infinity,
                 ease: "linear",
-                delay: Math.random() * 5
+                delay: delay,
             }}
-            className="absolute font-mono flex flex-col items-center pointer-events-none"
+            className="absolute font-mono flex flex-col items-center pointer-events-none transform-gpu"
             style={{ left: `${xOffset}%` }}
         >
-            {binaryStr.split("").map((char, i) => {
-                const isLast = i === binaryStr.length - 1;
-                return (
-                    <span 
-                        key={i} 
-                        className={`
-                            text-sm md:text-base transition-colors duration-150
-                            ${isLast 
-                                ? "text-green-500 font-bold drop-shadow-[0_0_8px_rgba(34,197,94,0.8)]" 
-                                : "text-white/40" // Blanco con ligera transparencia para que el verde resalte
-                            }
-                        `}
-                    >
-                        {char}
-                    </span>
-                );
-            })}
+            {binaryStr.split("").map((char, i) => (
+                <span 
+                    key={i} 
+                    className={`text-[10px] md:text-sm transition-colors duration-300 ${
+                        i === length - 1 
+                        ? "text-green-400 font-bold drop-shadow-[0_0_5px_#22c55e]" 
+                        : "text-white/30"
+                    }`}
+                >
+                    {char}
+                </span>
+            ))}
         </motion.div>
     );
 };
 
 export default function BackGround() {
-    // Aumentamos a 40 columnas para que se note realmente la "lluvia"
-    const columns = Array.from({ length: 40 });
+    const [tick, setTick] = useState(0);
+    const [isMobile, setIsMobile] = useState(false);
+
+    // Un solo intervalo para TODAS las columnas
+    useEffect(() => {
+        setIsMobile(window.innerWidth < 768);
+        const interval = setInterval(() => {
+            setTick(prev => prev + 1);
+        }, 200); // Velocidad de mutación de los números
+        return () => clearInterval(interval);
+    }, []);
+
+    const columnCount = isMobile ? 12 : 30;
+    const columns = useMemo(() => Array.from({ length: columnCount }), [columnCount]);
 
     return (
-        // Fondo negro puro (bg-black)
-        <div className="transform-gpu absolute inset-0 bg-black overflow-hidden pointer-events-none">
-            {/* Gradiente sutil para que los números no mueran tan de golpe al final */}
-            <div className="absolute inset-0 bg-linear-to-b from-black via-transparent to-black z-2" />
+        <div className="absolute inset-0 bg-black overflow-hidden pointer-events-none transform-gpu">
+            <div className="absolute inset-0 bg-gradient-to-b from-black via-transparent to-black z-10" />
             
             {columns.map((_, i) => (
-                <BinaryColumn key={i} xOffset={i * 2.5} />
+                <BinaryColumn 
+                    key={i} 
+                    tick={tick} // Pasamos el pulso central
+                    xOffset={(i * (100 / columnCount))} 
+                    delay={i * 0.2} 
+                />
             ))}
         </div>
     );

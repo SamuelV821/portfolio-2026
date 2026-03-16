@@ -34,7 +34,7 @@ export default function NavBar({botones}){
     }, [isOpen]);
 
     return(
-        <nav className="bg-zinc-400/50 backdrop-blur-md w-full h-[10vh] flex flex-row gap-10 p-4 justify-between md:justify-baseline items-center sticky top-0 z-100 transform-gpu translate-z-0">
+        <nav className="bg-zinc-400/50 md:backdrop-blur-md w-full h-[10vh] flex flex-row gap-10 p-4 justify-between md:justify-baseline items-center sticky top-0 z-100 transform-gpu translate-z-0">
             <div className="flex flex-row w-fit pl-6 pr-6 font-bold text-2xl">
                 <button onClick={()=>{handleScroll("Home"); setIsOpen(false)}}><span>{"<"}</span><span>SamuelVega</span><span>{"/>"}</span></button>
             </div>
