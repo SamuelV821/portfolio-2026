@@ -26,13 +26,13 @@ export default function AboutMe(){
             <div className="flex flex-col justify-center items-baseline gap-10 p-6">
                 
                 <motion.div variants={labels} className="flex flex-row gap-3 justify-center items-center text-xl text-zinc-400 hover:text-[#0077b5] transition-colors">
-                    <FaLinkedin/><span>Linkedin</span>
+                    <a href={"https://www.linkedin.com/in/samuel-vega-942854220/"} target="_blank" rel="noopener noreferrer"><FaLinkedin/><span>Linkedin</span></a>
                 </motion.div>
                 <motion.div variants={labels} className="flex flex-row gap-3 justify-center items-center text-xl text-zinc-400 hover:text-white transition-colors">
-                    <FaGithub/><span>GitHub</span>
+                    <a href={"https://github.com/SamuelV821"} target="_blank" rel="noopener noreferrer"><FaGithub/><span>GitHub</span></a>
                 </motion.div>
                 <motion.div variants={labels} className="flex flex-row gap-3 justify-center items-center text-xl text-zinc-400 hover:text-white transition-colors" >
-                    <FiDownload/><span>Curriculum</span>
+                    <a href="/CV_Samuel_Vega.pdf" download="CV_Samuel_Vega.pdf" ><FiDownload/><span>Curriculum</span></a>
                 </motion.div>
                 
             </div>
