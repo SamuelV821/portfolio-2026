@@ -115,10 +115,36 @@ function App() {
 
         
         <section id="Stack" className="w-full p-6">
+          <motion.div 
+              initial={{ opacity: 0, x: -20 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              className="mb-10"
+            >
+              <h2 className="text-3xl md:text-5xl font-black text-white tracking-tighter uppercase">
+                <span className="text-green-500 font-mono text-2xl mr-4">{">_"}</span>
+                Tecnologías_principales<span className="animate-pulse">_</span>
+              </h2>
+              <div className="h-1 w-20 bg-green-500 mt-2"></div>
+            </motion.div>
           <StackTech/>
         </section>
 
         <section id="Proyects" className="flex flex-col w-full p-10">
+
+          <motion.div 
+              initial={{ opacity: 0, x: -20 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              className="mb-10"
+            >
+              <h2 className="text-3xl md:text-5xl font-black text-white tracking-tighter uppercase">
+                <span className="text-green-500 font-mono text-2xl mr-4">{">_"}</span>
+                Proyectos_destacados<span className="animate-pulse">_</span>
+              </h2>
+              <div className="h-1 w-20 bg-green-500 mt-2 "></div>
+          </motion.div>
+
           <div className="flex flex-col md:grid md:grid-cols-2 gap-5">
             <Card linkProyecto={"https://stock.samuel-v.dev/"} image={"/Proyectos/clickVenta.webp"} text={"Sistema centralizado para el control de inventario y optimización de ventas en tiempo real. Arquitectura robusta diseñada para transformar la gestión manual en un flujo de trabajo digital eficiente y escalable para comercios locales"} tech={["#React","#Tailwind","#Supabase","#PostgreSQL"]}/>
             <Card linkProyecto={"https://samuel-v.dev/"} image={"/Proyectos/portfolio.webp"} text={"Portfolio profesional desarrollado con un enfoque en la optimización de recursos y rendimiento web. Implementación de interfaces interactivas mediante el uso eficiente de hooks de React y animaciones declarativas, logrando una experiencia de usuario fluida y liviana."} tech={["#React","#Tailwind","#Motion","#Vite"]}/>

@@ -26,13 +26,13 @@ export default function AboutMe(){
             <div className="flex flex-col justify-center items-baseline gap-10 p-6">
                 
                 <motion.div variants={labels} className="flex flex-row gap-3 justify-center items-center text-xl text-zinc-400 hover:text-[#0077b5] transition-colors">
-                    <a href={"https://www.linkedin.com/in/samuel-vega-942854220/"} target="_blank" rel="noopener noreferrer" className="flex flex-row select-none gap-3"><FaLinkedin/><span>Linkedin</span></a>
+                    <a href={"https://www.linkedin.com/in/samuel-vega-942854220/"} target="_blank" rel="noopener noreferrer" className="flex flex-row select-none gap-3 justify-center items-center"><FaLinkedin/><span>Linkedin</span></a>
                 </motion.div>
                 <motion.div variants={labels} className="flex flex-row gap-3 justify-center items-center text-xl text-zinc-400 hover:text-white transition-colors">
-                    <a href={"https://github.com/SamuelV821"} target="_blank" rel="noopener noreferrer" className="flex flex-row select-none gap-3"><FaGithub/><span>GitHub</span></a>
+                    <a href={"https://github.com/SamuelV821"} target="_blank" rel="noopener noreferrer" className="flex flex-row select-none gap-3 justify-center items-center"><FaGithub/><span>GitHub</span></a>
                 </motion.div>
                 <motion.div variants={labels} className="flex flex-row gap-3 justify-center items-center text-xl text-zinc-400 hover:text-white transition-colors" >
-                    <a href="/CV_Samuel_Vega.pdf" download="CV_Samuel_Vega.pdf" className="flex flex-row select-none gap-3" ><FiDownload/><span>Curriculum</span></a>
+                    <a href="/CV_Samuel_Vega.pdf" download="CV_Samuel_Vega.pdf" className="flex flex-row select-none gap-3 justify-center items-center" ><FiDownload/><span>Curriculum</span></a>
                 </motion.div>
                 
             </div>

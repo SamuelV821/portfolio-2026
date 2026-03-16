@@ -23,7 +23,6 @@ export default function StackTech(){
     viewport={{once:true, amount:0.5}}
 
     className="bg-zinc-600 w-full p-8 gap-6 grid grid-cols-2 md:grid-cols-3 rounded-sm">
-      <h1 className="col-span-2 md:col-span-3 text-center text-3xl font-black italic mb-10">Tecnologias</h1>
       {stack.map((tech,index)=>(
         <motion.span
         initial={{opacity:0}}
