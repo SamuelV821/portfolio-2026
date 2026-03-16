@@ -27,7 +27,7 @@ export default function MailForm(){
         transition={{duration:0.3, when:"beforeChildren"}}
         viewport={{once:true, amount:0.5}}
         
-        className="bg-zinc-600 md:w-[60vh] gap-10 pl-2 pr-2 rounded-sm">
+        className="bg-zinc-600 md:w-[60vh] h-fit gap-10 pl-2 pr-2 rounded-sm">
             <div className="flex justify-center items-center border-b p-4 italic font-black text-2xl"><span>Contactame</span></div>
             <form className="flex flex-col justify-center items-center p-4 gap-6 w-full">
                 <motion.label variants={labels} className="font-bold">Tu nombre</motion.label>

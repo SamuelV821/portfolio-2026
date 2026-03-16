@@ -80,7 +80,7 @@ function App() {
                   <span className="text-white font-bold">{">"}</span> A través de <span className="text-green-400 italic">ClickVenta</span>, he ayudado a digitalizar negocios locales, transformando procesos manuales en flujos de trabajo automatizados. Mi combustible es el aprendizaje constante y los retos técnicos que otros evitan.
                 </p>
 
-                <div className="pt-4 flex gap-4">
+                <div className="pt-4 flex gap-4 select-none">
                     <div className="bg-zinc-900 border border-zinc-800 p-3 rounded-lg">
                         <p className="text-green-500 text-xs uppercase tracking-widest mb-1 font-bold">Residencia</p>
                         <p className="text-zinc-200">Salta, Argentina</p>
@@ -100,8 +100,8 @@ function App() {
               >
                 <div className="absolute -inset-1 bg-gradient-to-r from-green-500 to-emerald-900 rounded-lg blur opacity-25 group-hover:opacity-50 transition duration-1000"></div>
                 <div className="relative bg-zinc-900 border border-zinc-800 p-6 rounded-lg">
-                  <h3 className="text-white font-bold mb-4 border-b border-zinc-800 pb-2 font-mono text-xs uppercase">System_Info</h3>
-                  <ul className="space-y-3 font-mono text-[10px] md:text-xs">
+                  <h3 className="text-white font-bold mb-4 border-b border-zinc-800 pb-2 font-mono text-xs uppercase select-none">System_Info</h3>
+                  <ul className="space-y-3 font-mono text-[10px] md:text-xs select-none">
                     <li className="flex justify-between"><span className="text-zinc-500">ESTADO:</span> <span className="text-green-400 underline">DISPONIBLE</span></li>
                     <li className="flex justify-between"><span className="text-zinc-500">LOCACIÓN:</span> <span className="text-zinc-200">TARTAGAL (GMT-3)</span></li>
                     <li className="flex justify-between"><span className="text-zinc-500">EXPERIENCIA:</span> <span className="text-zinc-200">PROYECTOS REALES</span></li>
@@ -114,7 +114,7 @@ function App() {
         </section>
 
         
-        <section id="Stack" className="w-full p-6">
+        <section id="Stack" className="w-full p-6 min-h-screen">
           <motion.div 
               initial={{ opacity: 0, x: -20 }}
               whileInView={{ opacity: 1, x: 0 }}
@@ -130,7 +130,7 @@ function App() {
           <StackTech/>
         </section>
 
-        <section id="Proyects" className="flex flex-col w-full p-10">
+        <section id="Proyects" className="flex flex-col w-full p-10 min-h-screen">
 
           <motion.div 
               initial={{ opacity: 0, x: -20 }}
@@ -156,8 +156,8 @@ function App() {
           <AboutMe/>
         </section>
  
-        <section id="Footer" className="w-full">
-          <footer className="w-full border-t border-zinc-800/50 bg-black/20 backdrop-blur-md py-8 mt-20">
+        <section id="Footer" className="w-full select-none">
+          <footer className="w-full border-t border-zinc-800/50 bg-black/20 backdrop-blur-md py-8 mt-20 ">
             <div className="max-w-6xl mx-auto px-6 flex flex-col md:flex-row justify-between items-center gap-6">
               
               <div className="flex flex-col items-center md:items-start gap-1">
@@ -166,7 +166,7 @@ function App() {
                     <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75"></span>
                     <span className="relative inline-flex rounded-full h-2 w-2 bg-green-500"></span>
                   </span>
-                  <p className="text-zinc-400 text-xs font-mono tracking-widest uppercase">
+                  <p className="text-zinc-400 text-xs font-mono tracking-widest uppercase ">
                     Tartagal, Salta, AR // Status: Online
                   </p>
                 </div>
