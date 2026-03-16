@@ -59,7 +59,7 @@ export default function BackGround() {
 
     return (
         // Fondo negro puro (bg-black)
-        <div className="absolute inset-0 bg-black overflow-hidden pointer-events-none">
+        <div className="transform-gpu absolute inset-0 bg-black overflow-hidden pointer-events-none">
             {/* Gradiente sutil para que los números no mueran tan de golpe al final */}
             <div className="absolute inset-0 bg-linear-to-b from-black via-transparent to-black z-2" />
             
