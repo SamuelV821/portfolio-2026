@@ -121,7 +121,7 @@ function App() {
               viewport={{ once: true }}
               className="mb-10"
             >
-              <h2 className="text-3xl md:text-5xl font-black text-white tracking-tighter uppercase">
+              <h2 className="text-xl md:text-5xl font-black text-white tracking-tighter uppercase">
                 <span className="text-green-500 font-mono text-2xl mr-4">{">_"}</span>
                 Tecnologías_principales<span className="animate-pulse">_</span>
               </h2>
@@ -138,7 +138,7 @@ function App() {
               viewport={{ once: true }}
               className="mb-10"
             >
-              <h2 className="text-3xl md:text-5xl font-black text-white tracking-tighter uppercase">
+              <h2 className="text-xl md:text-5xl font-black text-white tracking-tighter uppercase">
                 <span className="text-green-500 font-mono text-2xl mr-4">{">_"}</span>
                 Proyectos_destacados<span className="animate-pulse">_</span>
               </h2>
